@@ -1,5 +1,5 @@
 {
-  "name": "my-dash-server",
+  "name": "dash-server",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -13,5 +13,5 @@
     "start": "node server.js"
   },
   "author": "Nathaniel Baer",
-  "license": "ISC"
+  "license": "MIT"
 }

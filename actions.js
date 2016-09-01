@@ -4,9 +4,9 @@ var config = require('./config');
 
 // Functions triggered by buttons
 
-exports.postSleep = function() {
+exports.httpPost = function(url) {
     request.post(
-        config.urls.sleep,
+        url,
         function (error, response, body) {
             console.log('Response:', response.statusCode)
         }

@@ -1,7 +1,7 @@
 var nodeDashButton = require('node-dash-button');
 
 var config = require('./config');
-var effects = require('./effects');
+var effects = require('./actions');
 
 // Initalize dash buttons
 var addresses = new Array;
@@ -16,7 +16,7 @@ dash.on('detected', function detectDash(dashId) {
         button = config.buttons[i];
         if (button.mac === dashId) {
             console.log(button.name, 'was pressed!')
-            effects[button.effect]();
+            effects[button.action].apply(this, button.parameters);
         }
     }
 });
